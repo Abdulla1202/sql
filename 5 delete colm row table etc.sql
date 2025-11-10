@@ -1,0 +1,28 @@
+CREATE TABLE employ2(
+	emply_id INT PRIMARY KEY,
+	name VARCHAR(100) NOT NULL,
+	position VARCHAR(50),
+	dipartment VARCHAR(50),
+	hire_date DATE,
+	salary NUMERIC(10,2)
+);
+
+SELECT * FROM employ2;
+
+INSERT INTO employ2 (emply_id,name, position, dipartment, hire_date, salary)
+  VALUES (101,'AJEET SHARMA', 'DATA ANALYST', 'DATA SCIENCE', '2022-05-15', 65000.00),
+    (102,'PRIYA VERMA', 'SOFTWARE ENGINEER', 'DEVELOPMENT', '2021-11-10', 72000.00),
+    (103,'RAHUL SINGH', 'PROJECT MANAGER', 'MANAGEMENT', '2020-08-25', 95000.00),
+    (104,'NEHA PATEL', 'UI/UX DESIGNER', 'DESIGN', '2023-02-12', 58000.00),
+    (105,'AMIT KUMAR', 'DEVOPS ENGINEER', 'OPERATIONS', '2022-09-30', 80000.00);
+
+DELETE FROM employ2
+WHERE emply_id = 105
+
+ALTER TABLE employ2
+DROP COLUMN salary;
+
+DROP TABLE IF EXISTS employ2;
+	
+
+
